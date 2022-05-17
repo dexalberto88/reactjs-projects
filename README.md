@@ -1,5 +1,6 @@
 ## Prerequisite
  - Linux OS (Mint, Ubuntu)
+ - React >= v18.1.0
 ## Development
  1. Install docker [link](https://docs.docker.com/engine/install/ubuntu/)
 ```bash
@@ -48,10 +49,12 @@ npm start
 docker start my-ubuntu
 docker exec -it my-ubuntu /bin/bash
 source ~/.profile
-cd shared_folder/auto-loan-calc
+cd shared_folder
+git clone https://github.com/dexalberto88/reactjs-projects.git
+cd reactjs-projects/
+cd auto-loan-calc/
 rm -rf src/
 cp -r ../src.auto-loan-calc/ src
-docker start
 npm start
 ```
 ![image](https://lh3.googleusercontent.com/pw/AM-JKLWhdBTsprNoA0vJB5rkNpN6FfNzBetRbliCQnaO5a8wfsGXVOEBGsxApAM59D6OtolDA1GMnDFG9MOeHU_QqxQ8BdWH-Ngf8gwpVLBEzCqf8CU78gDakLQGU0mHz1E0Dq1m9kxlKV0i-JHewqvlNa85=w395-h373-no?authuser=0)

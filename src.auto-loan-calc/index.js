@@ -1,13 +1,8 @@
-//import React, { useState } from 'react';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
 function ResultDisplay(props) {
-  const myStyle = {
-    border: "1px solid black"
-  };
-
   return (
     <div>
       <h2>Results</h2>
@@ -102,11 +97,11 @@ class MonthlyAmortizationCalc extends React.Component {
     let la40 = this.state.price - dp40;
     let iRate = 0;
 
-    if (this.state.term == 60)
+    if (parseFloat(this.state.term) === 60)
       iRate = 10.93;
-    else if (this.state.term == 48)
+    else if (parseFloat(this.state.term) === 48)
       iRate = 10.78;
-    else if (this.state.term == 36)
+    else if (parseFloat(this.state.term) === 36)
       iRate = 10.69;
 
     let ma20 = -this.computePMT((iRate/100)/12, this.state.term, la20).toFixed(2);
