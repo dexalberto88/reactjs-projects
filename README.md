@@ -1,9 +1,7 @@
 ## Prerequisite
-
  - Linux OS (Mint, Ubuntu)
-
 ## Development
- - Install docker [link](https://docs.docker.com/engine/install/ubuntu/)
+ 1. Install docker [link](https://docs.docker.com/engine/install/ubuntu/)
 ```bash
 sudo apt update
 sudo apt install -y docker.io
@@ -12,12 +10,12 @@ sudo usermod -aG docker $USER
 # open new terminal
 docker run hello-world # to check
 ```
- - Create docker container
+2. Create docker container
 ```bash
 docker pull ubuntu:20.04
 docker run -v ~/shared_folder:/root/shared_folder --cap-add=NET_ADMIN --name "my-ubuntu" -w "/root" -it "ubuntu:20.04"
 ```
- - Install nodejs [link1](https://nodejs.org/en/download/) [link2](https://github.com/nodejs/help/wiki/Installation)
+3. Install nodejs [link1](https://nodejs.org/en/download/) [link2](https://github.com/nodejs/help/wiki/Installation)
 ```bash
 apt update
 apt install -y wget
@@ -37,7 +35,7 @@ node -v
 npm version
 npx -v
 ```
- - Create react app [link](https://reactjs.org/docs/create-a-new-react-app.html)
+ 4. Create react app [link](https://reactjs.org/docs/create-a-new-react-app.html)
 ```bash
 cd ~/shared_folder/
 npx create-react-app <your_app_name> # if permission error run 'chown -R root:root ~/shared_folder'
@@ -56,5 +54,4 @@ cp -r ../src.auto-loan-calc/ src
 docker start
 npm start
 ```
-Sample output
 ![image](https://lh3.googleusercontent.com/pw/AM-JKLWhdBTsprNoA0vJB5rkNpN6FfNzBetRbliCQnaO5a8wfsGXVOEBGsxApAM59D6OtolDA1GMnDFG9MOeHU_QqxQ8BdWH-Ngf8gwpVLBEzCqf8CU78gDakLQGU0mHz1E0Dq1m9kxlKV0i-JHewqvlNa85=w395-h373-no?authuser=0)
